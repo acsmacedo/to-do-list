@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefas | Projeto pessoal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/72d2b64ad3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="header-instruction">
+      <div class="instructions"><p>*Verifique as instruções de uso no menu!</p></div>
+      <header id="header">
+        <div class="hr-greeting">
+          <i class="far fa-laugh-beam"></i>
+          <h5>Olá, <span>visitante</span>!</h5>
+          <p>Está na hora de colocar suas tarefas em dia.</p>
+        </div>
+        <div class="hr-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </header>      
+    </div>
+    
+    <section id="main">
+      <div class="title">
+        <h1>Tarefas</h1>
+        <p>Organize suas tarefas e torne-se mais produtivo. Uma tarefa cumprida motivará ainda mais o seu dia!</p>
+      </div>
+
+      <div class="fil-sort-invert">
+        <div class="invert"><i class="fas fa-sort"></i><span>Inverter</span></div>
+        <div class="fil-sort">
+          <div class="filter father">
+            <div class="filter-title"><i class="fas fa-filter"></i><span>Filtrar</span></div>
+            <div class="filter-items child hidden">
+              <div class="fil-important"><i class="fas fa-star important"></i><span>Importante</span></div>
+              <div class="fil-warning"><i class="fas fa-exclamation-triangle warning"></i><span>Atrasado</span></div>
+              <div class="fil-unchecked"><i class="fas fa-calendar-check check"></i><span>Pendente</span></div>
+            </div>
+          </div>
+          <div class="sort father">
+            <div class="sort-title"><i class="fas fa-sort-amount-up-alt"></i><span>Ordenar</span></div>
+            <div class="sort-items child hidden">
+              <div class="sort-letter"><i class="fas fa-sort-alpha-up"></i><span>Alfabeto</span></div>
+              <div class="sort-date"><i class="far fa-calendar-alt"></i><span>Prazo</span></div>
+              <div class="sort-color"><i class="fas fa-palette"></i><span>Cor</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list"></div>
+      
+      <form id="form">
+        <input id="task-form" name="task-form" type="text" placeholder="Digite sua tarefa..." autocomplete="off">
+        <div>
+          <select name="label-form" id="label-form">
+            <option name="red" value="border-a-red">Vermelho</option>
+            <option name="orange" value="border-b-orange">Laranja</option>
+            <option name="yellow" value="border-c-yellow">Amarelo</option>
+            <option name="green" value="border-d-green">Verde</option>
+            <option name="blue" value="border-e-blue">Azul</option>
+            <option name="purple" value="border-f-purple">Roxo</option>
+            <option name="pink" value="border-g-pink">Rosa</option>
+          </select>
+          <input id="deadline-form" name="deadline" type="date">
+          <button type="submit">OK</button>
+        </div>
+      </form>
+    </section>
+
+    <footer id="footer">
+      <p>Desenvolvido por <a href="https://github.com/acsmacedo" target="_blank">Anderson Macedo</a>.</p>
+      <div>
+        <a href="https://github.com/acsmacedo" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/acsmacedo/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.behance.net/andycarlos5145" target="_blank"><i class="fab fa-behance"></i></a>
+      </div>
+    </footer>
+  </div>
+  
+
+  <div class="overlay hidden"></div>
+  <div id="menu-content" class="hidden">
+    <div class="close-menu"><i class="fas fa-times"></i></div>
+
+    <div><p>Olá, como você se chama?</p></div>
+    <div class="user">
+      <input type="text">
+    </div>
+
+    <div class="title-options"><p>Escolha o mood do momento:</p></div>
+    <div class="avatar">
+      <span id="avatar-1" class="avatar-selected"><i class="far fa-laugh"></i></span>
+      <span id="avatar-2"><i class="far fa-laugh-squint"></i></span>
+      <span id="avatar-3"><i class="far fa-grin-beam-sweat"></i></span>
+      <span id="avatar-4"><i class="far fa-grin-hearts"></i></span>
+      <span id="avatar-5"><i class="far fa-sad-cry"></i></span>
+    </div>
+
+    <div class="title-options"><p>Escolha o plano de fundo:</p></div>
+    <div class="img-back">
+      <span id="background-1" class="back-selected"><div></div></span>
+      <span id="background-2"><div></div></span>
+      <span id="background-3"><div></div></span>
+      <span id="background-4"><div></div></span>
+    </div>
+
+    <div class="about">
+      <p>Este site é um projeto pessoal, sem fins comerciais. O autor não se responsabiliza pelo seu uso, podendo retirar o site do ar a qualquer momento.</p>
+      <ul>
+        <li>* Criado com HTML, CSS e Javascript (jQuery).</li>
+        <li>* Os dados são gravados localmente no navegador.</li>
+      </ul>
+      <div class="instructions-agree">
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">Você concorda com as instruções acima.</label>
+      </div>
+      <p>Qualquer dúvida ou comentário, entre em contato através dos links no rodapé do site!</p>
+    </div>
+  </div>
+
+
+  <script src="./assets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
